@@ -13,7 +13,8 @@ const Home = () => {
 
   useEffect(() => {
     if (trendingMovies === '') {
-      return async function response() {
+      response();
+      async function response() {
         try {
           const response = await axios.get(
             `${BASE_URL}${GET_VALUE}${MY_API_KEY}`
@@ -28,7 +29,7 @@ const Home = () => {
         } catch (error) {
           console.log(error);
         }
-      };
+      }
     }
   }, [trendingMovies]);
 

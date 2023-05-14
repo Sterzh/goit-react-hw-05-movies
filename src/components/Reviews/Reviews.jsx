@@ -48,7 +48,7 @@ export const Reviews = () => {
         </ul>
       ) : (
         <p className={css.cardReviewsError}>
-          We don`t have any reviews for this
+          We don`t have any reviews for this movie.
         </p>
       )}
     </>

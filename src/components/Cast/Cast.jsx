@@ -36,21 +36,30 @@ export const Cast = () => {
   }, [cast, params]);
 
   return (
-    <ul className={css.cast}>
-      {cast !== '' &&
-        cast.map(e => {
-          return (
-            <li key={e.id} className={css.cardCast}>
-              <img
-                src={IMAGES_BASE_URL + e.profile_path}
-                alt={e.name}
-                className={css.cardImg}
-              />
-              <p className={css.cardName}>{e.name}</p>
-              <p className={css.cardCharacter}>{`Character: ${e.character}`}</p>
-            </li>
-          );
-        })}
-    </ul>
+    <>
+      {cast.length !== 0 ? (
+        <ul className={css.cast}>
+          {cast.map(e => {
+            return (
+              <li key={e.id} className={css.cardCast}>
+                <img
+                  src={IMAGES_BASE_URL + e.profile_path}
+                  alt={e.name}
+                  className={css.cardImg}
+                />
+                <p className={css.cardName}>{e.name}</p>
+                <p
+                  className={css.cardCharacter}
+                >{`Character: ${e.character}`}</p>
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <p className={css.cardCastError}>
+          We don`t have any cast for this movie.
+        </p>
+      )}
+    </>
   );
 };
