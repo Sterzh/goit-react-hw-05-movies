@@ -1,0 +1,41 @@
+.cast {
+  padding-top: 15px;
+  display: grid;
+  max-width: calc(100% - 25px);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 5px;
+}
+
+.cardCast {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #000;
+  border-radius: 10px;
+  width: 150px;
+  margin-bottom: 15px;
+}
+.cardImg {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.cardName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 10px 10px 0px 10px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.38;
+}
+.cardCharacter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.38;
+}
