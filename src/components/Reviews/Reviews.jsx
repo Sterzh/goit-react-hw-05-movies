@@ -5,7 +5,6 @@ import css from './Reviews.module.css';
 
 const BASE_URL = 'https://api.themoviedb.org/3/';
 const MY_API_KEY = '?api_key=c511c78146d5adcdbcb48d13d0273853';
-// const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w200/';
 
 export const Reviews = () => {
   const [reviews, setReviews] = useState('');
@@ -13,7 +12,8 @@ export const Reviews = () => {
 
   useEffect(() => {
     if (reviews === '') {
-      return async function response() {
+      response();
+      async function response() {
         try {
           const response = await axios.get(
             `${BASE_URL}${`movie/${params}/reviews`}${MY_API_KEY}`
@@ -25,12 +25,11 @@ export const Reviews = () => {
               content: e.content,
             };
           });
-          //   console.log(cast);
           setReviews(reviews);
         } catch (error) {
           console.log(error);
         }
-      };
+      }
     }
   }, [reviews, params]);
 

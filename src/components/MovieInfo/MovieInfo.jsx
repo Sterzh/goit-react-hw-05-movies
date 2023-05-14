@@ -17,7 +17,8 @@ export const MovieInfo = () => {
 
   useEffect(() => {
     if (movieInfo === '') {
-      return async function response() {
+      response();
+      async function response() {
         try {
           const response = await axios.get(
             `${BASE_URL}${`movie/${params}`}${MY_API_KEY}`
@@ -35,15 +36,13 @@ export const MovieInfo = () => {
             poster_path: response.data.poster_path,
             vote_average: response.data.vote_average * 10,
           };
-          await setMovieInfo(movieInfo);
+          setMovieInfo(movieInfo);
         } catch (error) {
           console.log(error);
         }
-      };
+      }
     }
   }, [location, movieInfo, params]);
-
-  console.log(location);
 
   return (
     <>

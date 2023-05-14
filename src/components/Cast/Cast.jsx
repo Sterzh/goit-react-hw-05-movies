@@ -10,13 +10,11 @@ const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w200/';
 export const Cast = () => {
   const [cast, setCast] = useState('');
   const params = useParams().moviesId;
-  // console.log(params);
-
-  //   console.log(`${BASE_URL}${`movie/${params}`}${MY_API_KEY}${OPTIONS}`);
 
   useEffect(() => {
     if (cast === '') {
-      return async function response() {
+      response();
+      async function response() {
         try {
           const response = await axios.get(
             `${BASE_URL}${`movie/${params}/credits`}${MY_API_KEY}`
@@ -33,7 +31,7 @@ export const Cast = () => {
         } catch (error) {
           console.log(error);
         }
-      };
+      }
     }
   }, [cast, params]);
 
