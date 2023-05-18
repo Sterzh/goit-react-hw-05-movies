@@ -1,4 +1,5 @@
-import { MovieInfo } from 'components/MovieInfo/MovieInfo';
+import MovieInfo from 'components/MovieInfo/MovieInfo';
+import { Suspense } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
 const MoviesDetails = () => {
@@ -17,7 +18,9 @@ const MoviesDetails = () => {
         </li>
       </ul>
       <div>
-        <Outlet />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
       </div>
     </>
   );

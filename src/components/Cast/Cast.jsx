@@ -7,7 +7,7 @@ const BASE_URL = 'https://api.themoviedb.org/3/';
 const MY_API_KEY = '?api_key=c511c78146d5adcdbcb48d13d0273853';
 const IMAGES_BASE_URL = 'https://image.tmdb.org/t/p/w200/';
 
-export const Cast = () => {
+const Cast = () => {
   const [cast, setCast] = useState('');
   const params = useParams().moviesId;
 
@@ -63,3 +63,5 @@ export const Cast = () => {
     </>
   );
 };
+
+export default Cast;
