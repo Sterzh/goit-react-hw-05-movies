@@ -1,15 +1,13 @@
 const NotFound = () => {
   return (
-    <div>NotFound</div>
-    // <main>
-    //   <h1>Welcome</h1>
-    //   <img src="https://via.placeholder.com/960x240" alt="" />
-    //   <p>
-    //     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto,
-    //     laboriosam placeat incidunt rem illum animi nemo quibusdam quia
-    //     voluptatum voluptate.
-    //   </p>
-    // </main>
+    <h2
+      style={{
+        paddingTop: 15,
+        paddingBottom: 15,
+      }}
+    >
+      Page not found! Enter another query.
+    </h2>
   );
 };
 

@@ -59,8 +59,13 @@ const Movies = () => {
         <ul>
           {foundMovies.map(e => {
             return (
-              <Link key={e.id} to={`${e.id}`} state={{ from: location }}>
-                <li>{e.title}</li>
+              <Link
+                key={e.id}
+                to={`${e.id}`}
+                state={{ from: location }}
+                className="moviesLink"
+              >
+                <li className="moviesList">{e.title}</li>
               </Link>
             );
           })}

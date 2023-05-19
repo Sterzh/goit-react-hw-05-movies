@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import css from './Cast.module.css';
+import NoImageAVailable from '../../images/No_Image_Available.jpg';
 
 const BASE_URL = 'https://api.themoviedb.org/3/';
 const MY_API_KEY = '?api_key=c511c78146d5adcdbcb48d13d0273853';
@@ -43,7 +44,14 @@ const Cast = () => {
             return (
               <li key={e.id} className={css.cardCast}>
                 <img
-                  src={IMAGES_BASE_URL + e.profile_path}
+                  src={
+                    // {
+                    e.profile_path !== null
+                      ? IMAGES_BASE_URL + e.profile_path
+                      : NoImageAVailable
+                    // }
+                    // IMAGES_BASE_URL + e.profile_path
+                  }
                   alt={e.name}
                   className={css.cardImg}
                 />

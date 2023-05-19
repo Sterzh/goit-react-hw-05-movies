@@ -27,3 +27,49 @@ ul {
   border-bottom: 1px solid #000;
   padding: 15px;
 }
+
+.moviesLink {
+  text-decoration: none;
+}
+
+.moviesList {
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.moviesList:hover {
+  color: orange;
+}
+
+.trendingMoviesError {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.movieInfo {
+  border-bottom: 1px solid #000;
+  padding: 15px 0px;
+}
+
+.backLink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border: solid 1px #cfcfcf;
+  padding: 0px 5px;
+  width: 100px;
+  border-radius: 5px;
+  /* gap: 3px; */
+  margin-bottom: 10px;
+}
+.movieInfoCard {
+  display: flex;
+  gap: 15px;
+}
