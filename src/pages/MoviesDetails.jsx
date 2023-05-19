@@ -15,7 +15,6 @@ const MoviesDetails = () => {
   const [movieInfo, setMovieInfo] = useState('');
   const backLinkLocation = useRef(location.state?.from);
   const params = useParams().moviesId;
-  const [moviesDetailsError, setMoviesDetailsError] = useState('');
 
   useEffect(() => {
     if (movieInfo === '') {
@@ -41,7 +40,6 @@ const MoviesDetails = () => {
           setMovieInfo(movieInfo);
         } catch (error) {
           console.log(error);
-          setMoviesDetailsError(error.message);
         }
       }
     }
